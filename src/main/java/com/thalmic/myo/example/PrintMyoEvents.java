@@ -34,27 +34,27 @@ public class PrintMyoEvents {
 		                     case REST:
 		                       	System.out.println("REST");
 		                       	//setposeString(pose.);
-		                       	myoDevice.setposeString("rest AFFFF");
+		                       	myoDevice.setposeString("rest");
 		                        break;
 		                     case FIST:
 		                       	System.out.println("FIST");
-		                    	myoDevice.setposeString("fist AFFFF");
+		                    	myoDevice.setposeString("fist");
 		                        break;
 		                     case WAVE_IN:
 		                       	System.out.println("WAVE_IN");
-		                    	myoDevice.setposeString("wavein AFFFF");
+		                    	myoDevice.setposeString("wave-in");
 		                        break;
 		                     case WAVE_OUT:
 		                       	System.out.println("WAVE_OUT");
-		                    	myoDevice.setposeString("waveout AFFFF");
+		                    	myoDevice.setposeString("wave-out");
 		                        break;
 		                     case FINGERS_SPREAD:
 		                       	System.out.println("FINGERS_SPREAD");
-		                    	myoDevice.setposeString("fingers spread AFFFF");
+		                    	myoDevice.setposeString("fingers spread");
 		                         break;
 		                     case DOUBLE_TAP:
 		                       	System.out.println("DOUBLE_TAP");
-		                    	myoDevice.setposeString("Double tap AFFFF");
+		                    	myoDevice.setposeString("Double tap");
 		                        break;
 		                default:
 							break;
