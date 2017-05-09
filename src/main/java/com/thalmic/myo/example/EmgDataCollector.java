@@ -6,6 +6,7 @@ import com.thalmic.myo.AbstractDeviceListener;
 import com.thalmic.myo.FirmwareVersion;
 import com.thalmic.myo.Myo;
 
+//I made this class so the developer can pull the raw data only (without all the other types of data) the Emg data off the Myo
 public class EmgDataCollector extends AbstractDeviceListener {
 	private byte[] emgSamples;
 
