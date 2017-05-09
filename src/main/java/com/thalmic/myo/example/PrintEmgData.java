@@ -12,16 +12,16 @@ import com.thalmic.myo.example.BluetoothDevice;
 
 public class PrintEmgData extends AbstractDeviceListener {
 	
-	private BluetoothDevice myoDevice = new BluetoothDevice();
+	private BluetoothDevice myoDevice = new BluetoothDevice(); //Creates a new BluetoothDevice
 	
 	PrintEmgData() {
 
-		Hub tempHub = new Hub("com.example.print.emg.data");
-		myoDevice.setHub(tempHub);
+		Hub tempHub = new Hub("com.example.print.emg.data"); //Creating a new Hub
+		myoDevice.setHub(tempHub); //Setting the hub to BluetoothDevice setter that I made
 		
 
 		DeviceListener dC = new DataCollector();
-		myoDevice.getHub().addListener(dC);
+		myoDevice.getHub().addListener(dC); //Setting the hub from BluetoothDevice getter that I made
 
 		while (true) {
 			myoDevice.getHub().run(1000 / 20);
