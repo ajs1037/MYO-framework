@@ -88,6 +88,7 @@ public class PrintMyoEvents {
 	    }
     }
 
+	//Method to identify Multiple Myos. If no Myo exists it creates a new one by making a new BluetoothDevice()
 	private BluetoothDevice identifyDevice(Myo myo) {
         if (this.myoDevicesArray.isEmpty()) {
         	BluetoothDevice myoDevice = new BluetoothDevice(myo, 0);
