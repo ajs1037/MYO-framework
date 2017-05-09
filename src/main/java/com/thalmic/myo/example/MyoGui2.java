@@ -8,11 +8,17 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * Created by Adolfo Segura.... 
+ */
+
+//This is where I made the Gui for the myo
 public class MyoGui2 {
 
 	private JFrame frame;
 	private JTextField textField;
-	private BluetoothDevice myoDevice = new BluetoothDevice();
+	private BluetoothDevice myoDevice = new BluetoothDevice(); //Uses the class I made to make an 
+								   // instance of the BluetoothDevice (Myo)
 
 	/**
 	 * Launch the application.
@@ -52,7 +58,7 @@ public class MyoGui2 {
 		frame.getContentPane().add(textField);
 		
 		JButton VibrateButton = new JButton("Vibrate");
-		VibrateButton.addActionListener(new ActionListener() {
+		VibrateButton.addActionListener(new ActionListener() {  
 			public void actionPerformed(ActionEvent e) {
 				jButtonVibrateActionPerformed(e);
 			}
@@ -110,27 +116,27 @@ public class MyoGui2 {
 	}
 	private void jButtonVibrateActionPerformed(ActionEvent e) {
 		
-		myoDevice.vibrate();
+		myoDevice.vibrate(); //Uses the vibrate method made available when a new Bluetoothdevice instance is made
 		textField.setText("Vibrating Myo");
 	}
 	
 	private void jButtonPoseActionPerformed(java.awt.event.ActionEvent evt) {
 		
-		myoDevice.getCurrentPose();
+		myoDevice.getCurrentPose(); //Uses the getCurrentPose method I made in BluetoothDevice
 	 }
 	
 	private void jButtonLockActionPerformed(java.awt.event.ActionEvent evt) {
-		 myoDevice.lock();
+		 myoDevice.lock(); //Uses the lock method I made in BluetoothDevice
 		 textField.setText("Myo locked");
 	 }
 	
 	private void jButtonUnlockActionPerformed(java.awt.event.ActionEvent evt) {
-		 myoDevice.unlock();
+		 myoDevice.unlock(); //Uses the unlock method I made in BluetoothDevice
 		 textField.setText("Myo Unlocked");
 	 }
 	 
 	 private void jButtonStreamDataActionPerformed(java.awt.event.ActionEvent evt) {
-		 myoDevice.getEmgData();
+		 myoDevice.getEmgData(); //Uses the getEmgData method I made in BluetoothDevice
 		 textField.setText("Getting all the EMG data from Myo");
 	 }
 	 
