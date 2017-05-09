@@ -72,9 +72,9 @@ public class BluetoothDevice{
 	}
 	
 	public void getCurrentPose() {
-		setPose(new PrintMyoEvents());
-	}
-	
+		setPose(new PrintMyoEvents());	//Everytime the users does a new pose, getCurrentPose() is called which sets a new pose
+	}					// PrintMyoEvents(). In PrintMyoEvents(), I have an arraylist with the connected Myos.
+						// If its a new Myo it is added to the Arraylist, otherwise it updates the older one
 	public Myo getMyo() {
 		return myo;
 	}
