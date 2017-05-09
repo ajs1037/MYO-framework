@@ -10,9 +10,14 @@ import com.thalmic.myo.Hub;
 import com.thalmic.myo.Myo;
 import com.thalmic.myo.Pose;
 
+/*
+** Created by Adolfo Segura
+*/
+
+//This class provides a cleaner way to keep track of multiple Myos and printing the Data off of them
 public class PrintMyoEvents {
-    private final List<BluetoothDevice> myoDevicesArray = new ArrayList<>();
-    private BluetoothDevice myoDevice = new BluetoothDevice();
+    private final List<BluetoothDevice> myoDevicesArray = new ArrayList<>(); //An arraylist of type BlueoothDevice that I made
+    private BluetoothDevice myoDevice = new BluetoothDevice(); //Creating a new BluetoothDevice. 
     private String poseToString;
    
     PrintMyoEvents() {
