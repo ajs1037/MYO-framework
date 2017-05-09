@@ -13,6 +13,8 @@ import com.thalmic.myo.enums.VibrationType;
  * Created by adolfosegura on 2/21/17.
  */
 
+//I created this BluetoothDevice class so the developer only has to create a new instance
+// of BluetoothDevice and this class will automatically take care of getting/setting myo and hub
 public class BluetoothDevice{
 	
 	//private BluetoothDevice myoDevice = new BluetoothDevice();
@@ -31,7 +33,7 @@ public class BluetoothDevice{
     private PrintEmgData emg;
     private int batteryLevel;
 
-    
+    //Constructor
     BluetoothDevice() {
     	this.hub = new Hub("");
     	this.myo = hub.waitForMyo(10000);
