@@ -67,8 +67,8 @@ public class MyoGui2 {
 		
 		VibrateButton.setBounds(6, 6, 117, 29);
 		frame.getContentPane().add(VibrateButton);
-		
-		JButton LockButton = new JButton("Lock");
+								//Locks the Myo when it is clicked 
+		JButton LockButton = new JButton("Lock");		
 		LockButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				jButtonLockActionPerformed(e);
@@ -76,7 +76,7 @@ public class MyoGui2 {
 		});
 		LockButton.setBounds(6, 37, 117, 29);
 		frame.getContentPane().add(LockButton);
-		
+									//Unlocks the Myo when it is clicked 
 		JButton UnlockButton = new JButton("UnLock");
 		UnlockButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -85,7 +85,7 @@ public class MyoGui2 {
 		});
 		UnlockButton.setBounds(135, 6, 117, 29);
 		frame.getContentPane().add(UnlockButton);
-		
+									//Streams the current data from Myo when it is clicked 
 		JButton StreamButton = new JButton("Stream Data");
 		StreamButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -94,7 +94,8 @@ public class MyoGui2 {
 		});
 		StreamButton.setBounds(135, 37, 117, 29);
 		frame.getContentPane().add(StreamButton);
-		
+									//Once clicked, it will print out the current pose  
+									//whenever the user changes poses
 		JButton PoseButton = new JButton("Current Pose");
 		PoseButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -104,7 +105,7 @@ public class MyoGui2 {
 		PoseButton.setBounds(264, 6, 117, 29);
 		frame.getContentPane().add(PoseButton);
 		
-		JButton ExitButton = new JButton("Exit");
+		JButton ExitButton = new JButton("Exit");		//System.exit(0);
 		ExitButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				jButtonExitActionPerformed(e);
