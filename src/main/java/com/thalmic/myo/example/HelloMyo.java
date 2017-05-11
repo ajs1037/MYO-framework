@@ -20,10 +20,10 @@ public class HelloMyo {
 			}
 
 			System.out.println("Connected to a Myo armband!");
-			//Then you have to add the dataCollector onto the hub.... or Myo?.... cunfusing right?
+			//Then you have to add the dataCollector onto the hub.... or Myo?.... confusing right?
 			DeviceListener dataCollector = new DataCollector();
-			hub.addListener(dataCollector);				//That it is more efficient to just create a new BluetoothDevice
-										// that I made
+			hub.addListener(dataCollector);				//It is more efficient to just create a new BluetoothDevice
+										// that I made. 
 			while (true) {
 				hub.run(1000 / 20);
 				System.out.print(dataCollector);
