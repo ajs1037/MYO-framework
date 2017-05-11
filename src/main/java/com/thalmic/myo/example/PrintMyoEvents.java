@@ -24,12 +24,12 @@ public class PrintMyoEvents {
 	    myoDevice.getHub().addListener(new AbstractDeviceListener() {
 	    
 		    @Override
-		    public void onPair(Myo myo, long timestamp, FirmwareVersion firmwareVersion) {
+		    public void onPair(Myo myo, long timestamp, FirmwareVersion firmwareVersion) { //On pair add Myo to ArrayList
 		    	myoDevicesArray.add(myoDevice);
 		    }
 		
 		    @Override
-		    public void onPose(Myo myo, long timestamp, Pose pose) {
+		    public void onPose(Myo myo, long timestamp, Pose pose) { //Updates with the current pose that the user is currently making
 		    	//System.out.println(String.format("Myo %s switched to pose %s.", identifyMyo(myo), pose.toString()));
 		    	//System.out.println(pose.toString());
 
